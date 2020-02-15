@@ -1,1 +1,4 @@
 .container-bash-history
+__pycache__
+# TODO: remove when switching to postgres...
+db.sqlite3

@@ -13,4 +13,6 @@ RUN groupadd -r -g 1000 appuser && \
     useradd --no-log-init -r -u 1000 -g appuser appuser
 USER appuser
 
-WORKDIR /app
+WORKDIR /app/src
+
+CMD [ "python", "manage.py", "runserver", "0:8000" ]

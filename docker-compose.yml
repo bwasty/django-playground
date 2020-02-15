@@ -5,4 +5,6 @@ services:
     build: .
     volumes:
       - .:/app:rw
-      - .container-bash-history:/root/.bash_history:delegated
+      - .container-bash-history:/home/appuser/.bash_history:delegated
+    ports:
+     - 8000:8000

@@ -5,5 +5,7 @@ project setup steps:
 - dc run bash:
   - poetry init (not `new`!)
   - poetry add Django
-  - django-admin startproject <name>
-    - or `<name> src` to have folder called src?
+  - mkdir src
+  - django-admin startproject <name> src
+  - python manage.py 0:8000
+    - without 0 problems from docker...
