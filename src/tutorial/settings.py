@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from .utils import env_var
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -75,8 +77,16 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django-tutorial',
+        'USER': env_var('DB_USER'),
+        'PASSWORD': env_var('DB_PASSWORD'),
+        'HOST': env_var('DB_HOST'),
+        'PORT': env_var('DB_PORT', 5432),
+        'ATOMIC_REQUESTS': True,
+        'AUTOCOMMIT': True,
+        # TODO!: try some value like 60 (enabling connection pooling)? check possible problems...
+        'CONN_MAX_AGE': 0,
     }
 }
 
@@ -105,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
