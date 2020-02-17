@@ -1,3 +1,12 @@
+## Playground for Django & Django REST Framework tutorials
+
+*Layout*
+* `src/tutorial`: Django project root
+* `src/polls`: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+* `src/drf_quickstart`: https://www.django-rest-framework.org/tutorial/quickstart/
+* `src/snippets`: https://www.django-rest-framework.org/tutorial/1-serialization/
+
+----
 project setup steps:
 - Dockerfile with poetry
 - docker-compose.yml
@@ -14,8 +23,3 @@ TODO
 - apps/lib? https://stackoverflow.com/questions/4479901/django-shared-library-classes
   - see also 2nd answer
 
-----
-
-* Getting Started
-- link to django docs
-  - mention tutorial...
