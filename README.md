@@ -22,4 +22,23 @@ project setup steps:
 TODO
 - apps/lib? https://stackoverflow.com/questions/4479901/django-shared-library-classes
   - see also 2nd answer
+  
+---
+
+docs links:
+- django 
+  - overview
+  - tutorial
+  - topics
+  - api docs
+- drf
+  - quickstart
+  - tutorial
+  - guide
+  
+- bookmarks:
+  - https://docs.djangoproject.com/en/3.0/topics/db/models/#multi-table-inheritance
+  - https://www.django-rest-framework.org/api-guide/requests/
+  - https://www.django-rest-framework.org/api-guide/requests/#
+
 
